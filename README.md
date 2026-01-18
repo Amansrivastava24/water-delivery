@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Water Delivery Management System
 
 A production-ready full-stack web application for managing daily water bottle deliveries and bulk event orders.
@@ -409,3 +410,6 @@ For issues or questions, please create an issue in the repository.
 ---
 
 **Built with ❤️ for water delivery businesses**
+=======
+# water-delivery
+>>>>>>> 3f7670d39963f7967ca21cfd288095c027b2c72e
