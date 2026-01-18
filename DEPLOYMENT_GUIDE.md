@@ -241,7 +241,7 @@ git push
 
 Update `backend/server.js` to allow your Vercel domain:
 
-```javascript
+```javascriptgit
 // CORS configuration
 app.use(cors({
     origin: [

@@ -21,7 +21,13 @@ connectDB();
 
 // Middleware
 app.use(helmet()); // Security headers
-app.use(cors()); // Enable CORS
+app.use(cors({
+    origin: [
+        'http://localhost:5173',
+        'https://water-delivery-xxxx.vercel.app'  // Add your Vercel URL
+    ],
+    credentials: true
+}));
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
@@ -35,12 +41,11 @@ if (process.env.NODE_ENV === 'development') {
 
 // Health check route
 app.get('/health', (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: 'Server is running',
-        timestamp: new Date().toISOString()
-    });
+    res.status(200).send('🔥 HEALTH ROUTE HIT 🔥');
 });
+
+
+
 
 // API Routes
 app.use('/api/auth', authRoutes);
